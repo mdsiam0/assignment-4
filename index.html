@@ -17,6 +17,14 @@
           
           --font-poppin: Poppins, sans-serif;
         }
+        .history-p {
+            background-color: #F4F7FF;
+            margin: 24px 10px 0 10px;
+            padding: 24px;
+            text-align: left;
+            border-radius: 8px;
+            
+        }
       </style>
 </head>
 
@@ -24,7 +32,7 @@
 
     <!-- navbar section -->
 
-    <nav class="max-w-7xl bg-white flex mx-auto justify-between min-h-24 items-center px-6 mt-6 rounded-2xl">
+    <nav class="max-w-[1536px] bg-white flex mx-auto justify-between min-h-24 items-center px-6 mt-6 rounded-2xl">
         <div class="flex items-center">
             <div>
                 <img src="./assets/logo.png" alt="">
@@ -36,7 +44,7 @@
                 <div>
                     <img src="./assets/checkbox.png" alt="">
                 </div>
-                <p class="text-3xl font-bold ml-2">23</p>
+                <p id="nav-number" class="text-3xl font-bold ml-2">23</p>
 
             </div>
             <div class="ml-8 bg-[#F4F7FF] p-3 rounded-full">
@@ -48,24 +56,25 @@
 
 
 
-    <section class="max-w-7xl mx-auto grid grid-cols-4 gap-5 mt-5">
+    <section class="max-w-[1536px] mx-auto grid grid-cols-4 gap-5 mt-5 mb-6">
 
         <!-- hero section  -->
 
-        <div class="bg-white  col-span-3 rounded-2xl pb-11 ">
+        <div class="bg-white  col-span-3 rounded-2xl pb-5 ">
             <div class="grid grid-cols-4 gap-4 mt-6 mx-6">
                 <div class="bg-[#F4F7FF]  flex py-8 px-4 items-center gap-3 rounded-xl">
                     <div class=" bg-white p-3 rounded-full ">
                         <img src="./assets/checkbox.png" alt="">
-                        
+
                     </div>
 
                     <div>
                         <p class="font-medium text-xs">Task Assigned </p>
-                        <p class="text-3xl font-bold">05</p>
+                        <p id="task-number" class="text-3xl font-bold">6</p>
                     </div>
                 </div>
-                <div class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] col-span-2 flex py-8 px-4 items-center gap-3 rounded-xl">
+                <div
+                    class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] col-span-2 flex py-8 px-4 items-center gap-3 rounded-xl">
                     <div>
                         <img src="./assets/board.png" alt="">
                     </div>
@@ -77,28 +86,179 @@
 
                     </div>
                     <div>
-                        <p>Wed , <br>
-                           <span class="font-bold ">Jul 28 2025</span> </p>
+                        <p id="weekday"></p>
+                            <p id="date" class="font-bold "></p>
+                        
                     </div>
                 </div>
             </div>
-            <div class="border-dashed border border-[#3752FD] opacity-20 my-5">
-                
+            <div class="border-dashed border border-[#3752FD] opacity-20 my-5"></div>
+            <!-- hero section card -->
+            <div class="grid grid-cols-3 gap-6 mx-6 ">
+                <div>
+                    <div class="bg-[#F4F7FF] p-5">
+                        <div>
+                            <h3 class="py-2 px-4 max-w-32 bg-white rounded-lg">ShopEase</h3>
+                            <h2 id="task-one" class="font-medium text-xl mt-4">Fix Mobile Button Issue </h2>
+                            <p class="bg-white rounded-lg mt-4 p-3 text-sm">Debug using Chrome DevTools, check for
+                                overlapping
+                                elements,
+                                and ensure onClick works
+                                properly</p>
+                        </div>
+                        <div class="border-dashed border border-[#3752FD] opacity-20 mt-3"></div>
+                        <div class="flex mt-3 items-center justify-between">
+                            <div>
+                                <p class="opacity-70 text-[14px]">Deadline</p>
+                                <p>21 March 2025</p>
+                            </div>
+                            <div>
+                                <button id="shop-ease-btn" class="bg-[#3752FD] text-white py-2 px-4 rounded-xl cursor-pointer">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-[#F4F7FF] p-5">
+                        <div>
+                            <h3 class="py-2 px-4 max-w-32 bg-white rounded-lg">CloudSync</h3>
+                            <h2 class="font-medium text-xl mt-4">Add Dark Mode </h2>
+                            <p class="bg-white rounded-lg mt-4 p-3 text-sm">Store the user's preference in localStorage,
+                                update CSS variables dynamically</p>
+                        </div>
+                        <div class="border-dashed border border-[#3752FD] opacity-20 mt-3"></div>
+                        <div class="flex mt-3 items-center justify-between">
+                            <div>
+                                <p class="opacity-70 text-[14px]">Deadline</p>
+                                <p>21 March 2025</p>
+                            </div>
+                            <div>
+                                <button class="bg-[#3752FD] text-white py-2 px-4 rounded-xl">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-[#F4F7FF] p-5">
+                        <div>
+                            <h3 class="py-2 px-4 max-w-32 bg-white rounded-lg">SwiftPay</h3>
+                            <h2 class="font-medium text-xl mt-4">Optimize Home page  </h2>
+                            <p class="bg-white rounded-lg mt-4 p-3 text-sm">Debug using Chrome DevTools, check for
+                                overlapping
+                                elements,
+                                and ensure onClick works
+                                properly</p>
+                        </div>
+                        <div class="border-dashed border border-[#3752FD] opacity-20 mt-3"></div>
+                        <div class="flex mt-3 items-center justify-between">
+                            <div>
+                                <p class="opacity-70 text-[14px]">Deadline</p>
+                                <p>21 March 2025</p>
+                            </div>
+                            <div>
+                                <button class="bg-[#3752FD] text-white py-2 px-4 rounded-xl">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-[#F4F7FF] p-5">
+                        <div>
+                            <h3 class="py-2 px-4 max-w-32 bg-white rounded-lg">Meta</h3>
+                            <h2 class="font-medium text-xl mt-4">Add new emoji 🤲 </h2>
+                            <p class="bg-white rounded-lg mt-4 p-3 text-sm">Debug using Chrome DevTools, check for
+                                overlapping
+                                elements,
+                                and ensure onClick works
+                                properly</p>
+                        </div>
+                        <div class="border-dashed border border-[#3752FD] opacity-20 mt-3"></div>
+                        <div class="flex mt-3 items-center justify-between">
+                            <div>
+                                <p class="opacity-70 text-[14px]">Deadline</p>
+                                <p>21 March 2025</p>
+                            </div>
+                            <div>
+                                <button class="bg-[#3752FD] text-white py-2 px-4 rounded-xl">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-[#F4F7FF] p-5">
+                        <div>
+                            <h3 class="py-2 px-4 max-w-32 bg-white rounded-lg">Google LLC</h3>
+                            <h2 class="font-medium text-xl mt-4">Integrate OpenAI API </h2>
+                            <p class="bg-white rounded-lg mt-4 p-3 text-sm">Debug using Chrome DevTools, check for
+                                overlapping
+                                elements,
+                                and ensure onClick works
+                                properly</p>
+                        </div>
+                        <div class="border-dashed border border-[#3752FD] opacity-20 mt-3"></div>
+                        <div class="flex mt-3 items-center justify-between">
+                            <div>
+                                <p class="opacity-70 text-[14px]">Deadline</p>
+                                <p>21 March 2025</p>
+                            </div>
+                            <div>
+                                <button class="bg-[#3752FD] text-white py-2 px-4 rounded-xl">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-[#F4F7FF] p-5">
+                        <div>
+                            <h3 class="py-2 px-4 max-w-32 bg-white rounded-lg">Glassdoar</h3>
+                            <h2 class="font-medium text-xl mt-4">Improve Job searching </h2>
+                            <p class="bg-white rounded-lg mt-4 p-3 text-sm">Debug using Chrome DevTools, check for
+                                overlapping
+                                elements,
+                                and ensure onClick works
+                                properly</p>
+                        </div>
+                        <div class="border-dashed border border-[#3752FD] opacity-20 mt-3"></div>
+                        <div class="flex mt-3 items-center justify-between">
+                            <div>
+                                <p class="opacity-70 text-[14px]">Deadline</p>
+                                <p>21 March 2025</p>
+                            </div>
+                            <div>
+                                <button class="bg-[#3752FD] text-white py-2 px-4 rounded-xl">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
- <!-- hero section card -->
         </div>
-        
 
-       
 
-       
+
+
+
 
         <!-- activty section -->
         <div class="bg-white rounded-2xl">
+            <div class="text-center">
+                <div class="flex justify-center items-center mt-6">
+                    <div>
+                        <img src="./assets/activity.png" alt="">
+                    </div>
+                    <h4 class="text-xl font-medium ml-2">Activity Log</h4>
+                </div>
+                <button id="clear-history" class="bg-[#3752FD] text-white px-5 py-2 rounded-lg mt-4">Clear History</button>
+                <div class="border-dashed border border-[#3752FD] opacity-20 mt-4"></div>
+                <div id="log-history">
+                    
 
+                </div>
+            </div>
         </div>
 
     </section>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
