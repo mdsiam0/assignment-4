@@ -9,6 +9,9 @@ document.getElementById('swift-pay-btn')
     const tastCounts = document.getElementById('task-number').innerText;
     const tastCount = parseInt(tastCounts);
     const sub = tastCount - 1;
+    if(tastCount === 1 ){
+        alert('congrate You have completed all the current task')
+    }
     document.getElementById('task-number').innerText = sub;
     const navNums = document.getElementById('nav-number').innerText;
     const navNum = parseInt(navNums);
